@@ -13,6 +13,6 @@ const badFruitSchema = new mongoose.Schema(
 );
 
 // mongoose.model(<mongodb collection name>, our schema) is the general default and it creates a collection inside of MongoDB that is named from the first argument, Musicians here. And it applies the schema above to that collection.
-const badFruit = mongoose.model('Musician', badFruitSchema);
+const badFruit = mongoose.model('BadFruit', badFruitSchema);
 
 module.exports = badFruit;
