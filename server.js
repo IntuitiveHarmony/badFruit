@@ -2,9 +2,9 @@
 const express = require('express');
 const app = express();
 // This is bringing in the exports from my badFruit controller
-const { badFruit } = require('./controllers');
-// const badFruitController = require('./controllers/badFruit.js');
-// const usersController = require('./controllers/users.js');
+// const { badFruit } = require('./controllers');
+
+
 const methodOverride = require('method-override');
 
 // START OF MIDDLEWARE!!! 
@@ -38,7 +38,9 @@ app.get('/', (req, res) => {
 // app.use is saying I want to use all of the imports from my badFruit controller. If the first argument is saying the base URL is now http://localhost:4000/badFruit when that file is read
 // app.use('', badFruitController);
 // The version we're using is the ES6 destructuring but it would  be fine to use this traditional version as well.
-app.use('', badFruit);
+
+
+// app.use('', badFruit);
 
 app.get('/*', (req, res) => {
     res.render('404');
