@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 // This is bringing in the exports from my badFruit controller
-// const { badFruit } = require('./controllers');
+const { badFruit } = require('./controllers');
 
 
 const methodOverride = require('method-override');
@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
 // The version we're using is the ES6 destructuring but it would  be fine to use this traditional version as well.
 
 
-// app.use('', badFruit);
+app.use('', badFruit);
 
 app.get('/*', (req, res) => {
     res.render('404');
